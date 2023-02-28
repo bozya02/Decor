@@ -72,6 +72,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Windows\CaptchaWindow.xaml.cs">
+      <DependentUpon>CaptchaWindow.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\Category.cs">
@@ -109,6 +112,7 @@
     <Compile Include="DB\ProductOrder.cs">
       <DependentUpon>DecorModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\ProductPartial.cs" />
     <Compile Include="DB\Role.cs">
       <DependentUpon>DecorModel.tt</DependentUpon>
     </Compile>
@@ -129,6 +133,9 @@
     </Compile>
     <Compile Include="Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductPage.xaml.cs">
+      <DependentUpon>ProductPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProductsListPage.xaml.cs">
       <DependentUpon>ProductsListPage.xaml</DependentUpon>
@@ -175,7 +182,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ProductPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ProductsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CaptchaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

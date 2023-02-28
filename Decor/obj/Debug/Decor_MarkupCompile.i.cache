@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\201906\source\repos\Decor\Decor\App.xaml
-3-1095135088
+5-1262230049
 21220016053
-24-638168981
+27990407168
 191643101186
-DecorWindow.xaml;Pages\AuthorizationPage.xaml;Pages\ProductsListPage.xaml;
+DecorWindow.xaml;Pages\AuthorizationPage.xaml;Pages\ProductPage.xaml;Pages\ProductsListPage.xaml;Windows\CaptchaWindow.xaml;
 
-False
+True
 

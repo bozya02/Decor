@@ -25,3 +25,7 @@ C:\Users\201906\source\repos\Decor\Decor\obj\Debug\Decor_Content.g.cs
 C:\Users\201906\source\repos\Decor\Decor\obj\Debug\Decor.csproj.CopyComplete
 C:\Users\201906\source\repos\Decor\Decor\obj\Debug\Pages\ProductsListPage.g.cs
 C:\Users\201906\source\repos\Decor\Decor\obj\Debug\Pages\ProductsListPage.baml
+C:\Users\201906\source\repos\Decor\Decor\obj\Debug\Pages\ProductPage.g.cs
+C:\Users\201906\source\repos\Decor\Decor\obj\Debug\Pages\ProductPage.baml
+C:\Users\201906\source\repos\Decor\Decor\obj\Debug\Windows\CaptchaWindow.g.cs
+C:\Users\201906\source\repos\Decor\Decor\obj\Debug\Windows\CaptchaWindow.baml

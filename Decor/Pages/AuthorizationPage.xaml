@@ -27,5 +27,6 @@
         <PasswordBox x:Name="pbPassword" Grid.Row="1" Grid.Column="1"/>
 
         <Button x:Name="btnLogin" Content="Войти" Grid.Row="2" Grid.ColumnSpan="2" Click="btnLogin_Click"/>
+        <Button x:Name="btnGuest" Content="Войти как гость" Grid.Row="2" HorizontalAlignment="Right" Grid.ColumnSpan="2" Click="btnGuest_Click"/>
     </Grid>
 </Page>

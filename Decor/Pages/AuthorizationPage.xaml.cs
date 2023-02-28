@@ -21,6 +21,8 @@ namespace Decor.Pages
     /// </summary>
     public partial class AuthorizationPage : Page
     {
+        private int _attempt = 0;
+
         public AuthorizationPage()
         {
             InitializeComponent();
@@ -31,10 +33,23 @@ namespace Decor.Pages
             var login = tbLogin.Text;
             var password = pbPassword.Password;
 
+            if (_attempt != 0 && !(bool)(new Windows.CaptchaWindow().ShowDialog()))
+                return;
+            
+
             if ((App.User = DataAccess.Login(login, password)) != null)
             {
                 NavigationService.Navigate(new ProductsListPage());
             }
+            else
+            {
+                _attempt++;
+            }
+        }
+
+        private void btnGuest_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ProductsListPage());
         }
     }
 }
