@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Decor.DB;
 
 namespace Decor
 {
@@ -13,5 +14,6 @@ namespace Decor
     /// </summary>
     public partial class App : Application
     {
+        public static User User { get; set; }
     }
 }

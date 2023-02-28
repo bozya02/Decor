@@ -38,9 +38,18 @@
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -65,8 +74,64 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Category.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DataAccess.cs" />
+    <Compile Include="DB\DecorEntities.cs" />
+    <Compile Include="DB\DecorModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DecorModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DecorModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DecorModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DecorModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DeliveryPoint.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Order.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Producer.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Product.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ProductOrder.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Role.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Supplier.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sysdiagram.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Unit.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\User.cs">
+      <DependentUpon>DecorModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DecorWindow.xaml.cs">
       <DependentUpon>DecorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AuthorizationPage.xaml.cs">
+      <DependentUpon>AuthorizationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductsListPage.xaml.cs">
+      <DependentUpon>ProductsListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -85,6 +150,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="DB\DecorModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DecorModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\DecorModel.edmx.diagram">
+      <DependentUpon>DecorModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,6 +171,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AuthorizationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProductsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\icon.ico" />
@@ -106,7 +187,20 @@
     <Resource Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pages\" />
+    <Content Include="DB\DecorModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DecorModel.Context.cs</LastGenOutput>
+      <DependentUpon>DecorModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DB\DecorModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DecorModel.edmx</DependentUpon>
+      <LastGenOutput>DecorModel.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Resources\default_picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

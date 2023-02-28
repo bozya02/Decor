@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="99dbe8f55b1341a4b73c81292d37510a" Name="Diagram1">
+        <EntityTypeShape EntityType="DecorModel.Category" Width="1.5" PointX="0.75" PointY="8.125" />
+        <EntityTypeShape EntityType="DecorModel.DeliveryPoint" Width="1.5" PointX="0.75" PointY="13" />
+        <EntityTypeShape EntityType="DecorModel.Order" Width="1.5" PointX="3" PointY="14" />
+        <EntityTypeShape EntityType="DecorModel.Producer" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DecorModel.Product" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="DecorModel.ProductOrder" Width="1.5" PointX="5.25" PointY="2.25" />
+        <EntityTypeShape EntityType="DecorModel.Role" Width="1.5" PointX="1.5" PointY="18.75" />
+        <EntityTypeShape EntityType="DecorModel.Supplier" Width="1.5" PointX="0.75" PointY="2.625" />
+        <EntityTypeShape EntityType="DecorModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DecorModel.Unit" Width="1.5" PointX="0.75" PointY="10.375" />
+        <EntityTypeShape EntityType="DecorModel.User" Width="1.5" PointX="0.75" PointY="15.375" />
+        <AssociationConnector Association="DecorModel.FK_Product_Category" />
+        <AssociationConnector Association="DecorModel.FK_Order_DeliveryPoint" />
+        <AssociationConnector Association="DecorModel.FK_Order_User" />
+        <AssociationConnector Association="DecorModel.FK_ProductOrder_Order" />
+        <AssociationConnector Association="DecorModel.FK_Product_Producer" />
+        <AssociationConnector Association="DecorModel.FK_Product_Supplier" />
+        <AssociationConnector Association="DecorModel.FK_Product_Unit" />
+        <AssociationConnector Association="DecorModel.FK_ProductOrder_Product" />
+        <AssociationConnector Association="DecorModel.FK_Client_Role" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
